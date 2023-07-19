@@ -1,12 +1,13 @@
-body{
-    background-color: rgb(43, 40, 40);
+#body{
+    background-color: rgb(61, 60, 60);
+    
 }
 section {
     margin: 1rem auto;
     width: 90%;
     max-width: 40rem;
     text-align: center;
-    background-color: white;
+    background-color: rgb(251, 244, 253);
     padding: 2rem;
     border-radius: 12px;
   }
