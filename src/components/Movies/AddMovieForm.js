@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-function AddMovieForm() {
+function AddMovieForm(props) {
   const [title, setTitle] = useState("");
   const [openingText, setOpeningText] = useState("");
   const [releaseDate, setReleaseDate] = useState("");
@@ -14,7 +14,7 @@ function AddMovieForm() {
       openingText: openingText,
       releaseDate: releaseDate,
     };
-    console.log(movie);
+    props.onAddMovie(movie);
   }
 
   function titleChangeHandler(event) {
