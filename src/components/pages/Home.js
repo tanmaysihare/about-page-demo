@@ -2,6 +2,7 @@ import React, { useState,useEffect,useCallback } from "react";
 
 import MoviesList from "../Movies/MoviesList";
 import "./Home.css";
+import AddMovieForm from "../Movies/AddMovieForm";
 
 function HomePage(){
     const [movies, setMovies] = useState([]);
@@ -61,7 +62,8 @@ if(error) {
 if(isLoading){
     content = <p>Loading...</p>;
 }
-    return <>
+    return <div id="body">
+        <section><AddMovieForm/></section>
            <section>
         <button onClick={fetchMoviesHandler}>Fetch Movies</button>
       </section>
@@ -69,6 +71,6 @@ if(isLoading){
       {content}
       </section>  
         
-    </>;
+    </div>;
 }
 export default HomePage;
